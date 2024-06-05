@@ -7,7 +7,7 @@ const Jet = (gender = 'all') => {
 
     // Функция getProducts отправляет GET-запрос на сервер, получает данные о товарах и обновляет их отображение на странице
     function getProducts() {
-        const url = 'https://better-success-f3e3e81dd8.strapiapp.com/api/products?populate=*'; // URL-адрес для запроса данных о товарах
+        const url = 'https:/api/products?populate=*'; // URL-адрес для запроса данных о товарах
         axios.get(url) // Выполнение GET-запроса с использованием axios
             .then(response => { // Обработка успешного ответа от сервера
                 const rens = response.data.data.filter(item => { // Фильтрация данных о товарах в зависимости от пола
@@ -30,9 +30,9 @@ const Jet = (gender = 'all') => {
                         const imageURL2 = rens[index].attributes.carusel.data[1].attributes.url;
                         const imageURL3 = rens[index].attributes.carusel.data[2].attributes.url;
                         const sex = rens[index].attributes.male;
-                        const fullImageURL2 = `https://better-success-f3e3e81dd8.strapiapp.com${imageURL2}`;
-                        const fullImageURL3 = `https://better-success-f3e3e81dd8.strapiapp.com${imageURL3}`;
-                        const fullImageURL = `https://better-success-f3e3e81dd8.strapiapp.com${imageURL}`;
+                        const fullImageURL2 = `https:${imageURL2}`;
+                        const fullImageURL3 = `https:${imageURL3}`;
+                        const fullImageURL = `https:${imageURL}`;
                         
                         // Обновление содержимого элементов для отображения данных о товаре
                         imgElement.src = fullImageURL;

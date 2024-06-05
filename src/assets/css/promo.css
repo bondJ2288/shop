@@ -1,0 +1,103 @@
+/* General styles */
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    background-color: black;
+    padding: 30px;
+    color: white;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.contacts {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.promo {
+    flex: 1;
+    text-align: center;
+}
+
+.promotxt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.promo-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded corners only on the left */
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.sub {
+    padding: 10px 20px;
+    background-color: #799351;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners only on the right */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sub:hover {
+    background-color: #567c3e;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contacts {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .promo-input {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .email, .sub {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 5px; /* Remove rounded corners adjustment */
+    }
+
+    .email {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .promotxt {
+        font-size: 20px;
+    }
+
+    .email, .sub {
+        font-size: 14px;
+    }
+}

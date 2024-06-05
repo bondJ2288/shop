@@ -1,0 +1,175 @@
+/* General styles */
+
+.grid {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.search-container {
+    margin-bottom: 0px;
+}
+
+.searcher[type="text"] {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #799351;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.searcher[type="text"]:focus {
+    border-color: #45a049;
+    background-color: #fff;
+}
+
+.searcher[type="text"]::placeholder {
+    color: #aaa;
+}
+
+.searcher[type="text"]:hover {
+    border-color: #3e8e41;
+}
+
+.searcher[type="text"]:active {
+    border-color: #2e7031;
+}
+
+.searcher[type="text"]:disabled {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    color: #999;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.img-container {
+    position: relative;
+}
+
+.gridimg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease;
+}
+
+.gridimg.hidden {
+    opacity: 0;
+}
+
+.gridtxt {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.price {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-button {
+    display: block;
+    width: 100%; /* Занимать всю ширину элемента */
+    padding: 10px;
+    color: white;
+    background: #799351;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.grid-item:hover .add-to-cart-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.add-to-cart-button:hover {
+    background-color: #799351;
+}
+
+.idk {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #799351;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.idk:hover {
+    background-color: #799351;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in, height 0.5s ease-in;
+}
+
+.fade-in {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.5s ease-in, height 0.5s ease-in;
+}
+.show {
+    opacity: 1;
+    height: auto;
+}
+
+.fade-out {
+    opacity: 0;
+    height: 0;
+}
+
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

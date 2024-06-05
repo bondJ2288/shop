@@ -1,0 +1,162 @@
+/* Общий стиль контейнера товара */
+/* Стили для окошка с информацией о товаре */
+.product-modal {
+    display: none; /* Изначально скрытое */
+    position: fixed;
+    top: 50%;
+    width: 80%;
+    height: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Белый фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тень */
+    z-index: 9999; /* Задаем большой z-index для обеспечения видимости над другими элементами */
+
+}
+/* Стили для кнопки закрытия */
+.close-product-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 2px solid #ff6347; /* Красный цвет */
+    border-radius: 50%; /* Круглая форма */
+    color: #ff6347;
+    font-size: 24px;
+    text-align: center; /* Центрирование по горизонтали */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Плавное изменение цветов */
+}
+
+.close-product-modal:hover {
+    background-color: #ff6347; /* Изменение цвета фона при наведении */
+    border-color: #ff6347; /* Изменение цвета границы при наведении */
+    color: #ffffff; /* Изменение цвета иконки при наведении */
+}
+
+
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white; /* Зеленый цвет фона */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Стили для слайдера изображений */
+.product-image-slider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-image-slider img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Стили для заголовка, описания и цены товара */
+.product-title {
+    font-size: 24px;
+    color: #008000; /* Зеленый цвет текста */
+    margin-bottom: 10px;
+}
+
+.product-description-slider {
+    margin-bottom: 20px;
+}
+
+/* Стили для кнопок с размерами */
+.product-sizes {
+    margin-bottom: 10px;
+}
+
+.size {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 2px;
+    border-color: black;
+    cursor: pointer;
+}
+
+/* Стили для кнопки "Добавить в корзину" */
+.add-to-cart-button2 {
+    background-color: #799351;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button2:hover {
+    background-color: #799351; /* Изменение цвета при наведении */
+}
+/* Стили для слайдера изображений */
+.product-image-slider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Добавляем прокрутку по горизонтали */
+}
+
+.product-image-slider img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Стили для кнопок с размерами */
+.product-sizes {
+    margin-bottom: 10px;
+}
+
+.size {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 20px; /* Закругленные углы */
+    border: 1px solid #000; /* Черная граница */
+    cursor: pointer;
+}
+
+.size:hover {
+    background-color: #000; /* Изменение цвета при наведении */
+    color: #fff;
+}
+
+/* Стили для кнопки "Добавить в корзину" */
+.add-to-cart-button2 {
+    background-color: #799351;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button2:hover {
+    background-color: #799351; /* Изменение цвета при наведении */
+}
